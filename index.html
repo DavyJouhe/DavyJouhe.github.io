@@ -3,10 +3,77 @@
     <head>
         <meta charset="utf-8">
         <style>
-            #photo{height:350px;width:350px;border: 1px solid white;border-radius:175px;background-image:url("img/1.jpg"); }
+            html,body{
+                margin:0;
+                padding:0;
+            }
+            #photo{
+                height:160px;
+                width:160px;
+                border: 1px solid white;
+                border-radius:50%;
+                background-image:url("img/profile-photo.jpg"); 
+                background-repeat: no-repeat;
+                background-position:-32px -8px;
+            }
+            .header{
+                width: 100%;
+            }
+            .header-nav{
+                width: 100%;
+                height: 80px;
+                border:0px;
+                background-color:#444444; 
+            }
+            .header-cont{
+                width: 100%;
+                height: 85px;
+                border:0px;
+                background-color:white; 
+                position: relative;
+                border-top:1px solid #E5E5E5;
+                border-bottom:1px solid #E5E5E5;              
+            }
+            .header-box{
+                width: 180px;
+                height: 180px;
+                float: left;
+                margin-left: 47%;
+                position: relative;
+                z-index: 1;
+            }
+            .header-ft{
+                width: 100%;
+                height: 180px;
+                border:0px;
+                background-color:#F6F6F6; 
+                position: relative;
+            }
+            .chsSign{
+                top:80px;
+                margin-left: 40px;
+                font-family: "楷体";
+                font-size: 30px;
+            }           
+            .engSign{
+                top:80px;
+                margin-left: 15px;
+                font-family: Segoe Script;
+                font-size: 26px;
+            }
         </style>
     </head>
     <body>
-        <div id="photo"></div>
+        <div class="header">
+            <div class="header-nav"></div>
+            <div class="header-cont">
+                <div class="header-box">
+                    <div id="photo"></div>
+                    <span class="chsSign">黄家和</span>
+                    <span class="engSign">DavyJouhe</span>
+                </div>
+            </div>
+            <div class="header-ft"></div>
+        </div>
     </body>
 </html>
