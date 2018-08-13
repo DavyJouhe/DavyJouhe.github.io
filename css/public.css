@@ -1,0 +1,63 @@
+/* 
+* @Author: Jouhe
+* @Date:   2018-08-13 17:07:16
+* @Last Modified time: 2018-08-13 17:13:40
+*/
+
+.item {
+  margin-bottom: 30px;
+}
+.item-inner {
+  background: #00BCD4;
+  color: #fff;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  position: relative;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+}
+.item-inner:hover {
+  background: #00c5de;
+}
+.item-inner:hover img {
+  -webkit-opacity: 0.9;
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+}
+.item-inner .content {
+  padding: 30px;
+  padding-bottom: 75px;
+  position: relative;
+}
+.item-inner .content a {
+  color: #fff;
+}
+.item-inner .content .sub-title {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.item-inner .content .meta {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+}
+.item-inner .content .action {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+.item-inner .link-mask {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
