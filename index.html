@@ -2,93 +2,42 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <style>
-            html,body{
-                margin:0;
-                padding:0;
-            }
-            #photo{
-                height:160px;
-                width:160px;
-                border: 10px solid #F6F6F6;
-                border-radius:50%;
-                background-image:url("img/profile-photo.jpg"); 
-                background-repeat: no-repeat;
-                background-position:-32px -8px;
-            }
-            .header{
-                width: 100%;
-            }
-            .header-nav{
-                width: 100%;
-                height: 60px;
-                border:0px;
-                background-color:#444444; 
-            }
-            .header-cont{
-                width: 100%;
-                height: 85px;
-                border:0px;
-                background-color:white; 
-                position: relative;           
-            }
-            .header-box{
-                width: 180px;
-                height: auto;
-                float: left;
-                margin-left: 45%;
-                position: relative;
-                z-index: 1;
-                text-align: center;
-            }
-            .header-ft{
-                width: 100%;
-                height: 240px;
-                border:0px;
-                background-color:#F6F6F6; 
-                position: relative;
-                border-top:1px solid #E5E5E5;
-                border-bottom:1px solid #E5E5E5;     
-            }
-            .chsSign{
-                top:80px;
-                font-family: "楷体";
-                font-size: 30px;
-            }           
-            .engSign{
-                top:80px;
-                font-family: Segoe Script;
-                font-size: 26px;
-            }
-            .detail{
-                top:80px;
-                font-family: "楷体";
-                font-size: 26px;
-            }
-            .container{
-                height: 900px;
-                width: 100%;
-                background-color:#444444; 
-            }
-            .content{
-                
-            }
-        </style>
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="plugin/font-awesome/css/font-awesome.css" />
+        <script type="text/javascript" src="plugin/jquery-1.11.3/jquery.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
     </head>
     <body>
         <div class="header">
-            <div class="header-nav"></div>
             <div class="header-cont">
-                <div class="header-box">
-                    <div id="photo"></div>
+                    <img class="profile-pho">
                     <span class="chsSign">黄家和</span>
                     <span class="engSign">DavyJouhe</span>
-                </div>
+                    <span class="detail">前端开发工程师</span>
             </div>
-            <div class="header-ft"></div>
+            <div class="header-ft">
+    <!--                 <div class="info">
+                    <span ><i class="fa fa-envelope"></i><a href="mailto:1716981973@qq.com">1716981973@qq.com</a></span>
+                    <span class="ml25"><i class="fa fa-globe"></i><a href="https://davyjouhe.github.io" target="_blank">davyjouhe.github.io</a></span>
+                </div> -->
+            </div>
         </div>
-        <div class="container">
-            <div class="content"></div>
+        <div class="wrapper container">
+            <section id="portfolio-section" class="portfolio-section section">
+                <h2 class="section-title">MY TREASURE</h2>
+                <ul id="filters" class="filters clearfix">
+                    <li class="type active" date-src="frame/tech/tech_all.html">技术区</li>
+                    <li class="type" date-src="frame/note/note_all.html">小说区</li>
+                    <li class="type" date-src="frame/pic/pic_all">图片区</li>
+                    <li class="type" date-src="frame/music/music_all">音乐区</li>
+                    <li class="type" date-src="frame/movie/movie_all">影评区</li>
+                    <li class="type" date-src="frame/book/book_all">书评区</li>
+                </ul><!--//filters-->
+                <div class="iframeContent" style="height:770px;">
+                    <iframe src="index.html" id="myiframe" name="iframe" frameborder="0" height="100%" width="100%" scrolling="auto"></iframe>
+                </div>
+            </section>
         </div>
     </body>
 </html>
