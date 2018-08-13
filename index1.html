@@ -36,12 +36,10 @@
     <body>
         <div class="header">
             <div class="header-cont">
-                <div class="header-box">
-                    <div class="profile-pho"></div>
+                    <img class="profile-pho">
                     <span class="chsSign">黄家和</span>
                     <span class="engSign">DavyJouhe</span>
                     <span class="detail">前端开发工程师</span>
-                </div>
             </div>
             <div class="header-ft">
 <!--                 <div class="info">
@@ -51,92 +49,128 @@
             </div>
         </div>
         <div class="wrapper container">
-            <section id="experiences-section" class="experiences-section section">
-                <h2 class="section-title">工作经验</h2>
-                <div class="timeline">
-                    <div class="item">
-                        <div class="work-place">
-                            <h3 class="place">泉州市排水管网在线监测系统</h3>
-                            <div class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>泉州</div>
-                        </div>
-                        <div class="job-meta">
-                            <div class="title">福建（泉州）哈工大工程技术研究院</div>
-                            <div class="time">2016.7.1 - 至今</div>
-                        </div><!--//job-meta-->
-                        <div class="job-desc">          
-                        <ul>
-                            <li>项目描述：</li>
-                            <p>该项目用于实时监测泉州城东区域水质以及水位是否排放超标。通过相应的传感器采样获取并分析，获取得数据显示于web界面，达到实时监控管理预警等效果。</p>
-                            <li>主要责任：</li>
-                            <p>独立完成web前端开发，百度地图API二次开发，前后端数据交互</p>
-                        </ul>
-                        </div><!--//job-desc-->
+            <section id="portfolio-section" class="portfolio-section section">
+                <h2 class="section-title">MY TREASURE</h2>
+                <ul id="filters" class="filters clearfix">
+                    <li class="type active" data-filter="*">技术区</li>
+                    <li class="type" data-filter=".backend">小说区</li>
+                    <li class="type" data-filter=".frontend">图片区</li>
+                    <li class="type" data-filter=".frontend">音乐区</li>
+                    <li class="type" data-filter=".frontend">影评区</li>
+                    <li class="type" data-filter=".frontend">书评区</li>
+                </ul><!--//filters-->
+                <div class="items-wrapper isotope row">
+                    <div class="item frontend col-md-3 col-xs-6 ">
+                        <div class="item-inner">
+                            <figure class="figure">
+                                <img class="img-responsive" src="assets/images/portfolio/portfolio-1.jpg" alt="" />
+                            </figure>
+                            <div class="content text-left">
+                                <h3 class="sub-title"><a href="#">Project Lorem Ipsum</a></h3>
+                                <div class="meta">AngularJS</div>
+                                <div class="action"><a href="#">View on Github</a></div>
+                            </div><!--//content-->    
+                            <a class="link-mask" href="#"></a>              
+                        </div><!--//item-inner-->
+                    </div><!--//item-->
+                    <div class="item backend col-md-3 col-xs-6 ">
+                        <div class="item-inner">
+                            <figure class="figure">
+                                <img class="img-responsive" src="assets/images/portfolio/portfolio-2.jpg" alt="" />
+                            </figure>
+                            <div class="content text-left">
+                                <h3 class="sub-title"><a href="#">Project Lorem Ipsum</a></h3>
+                                <div class="meta">Django</div>
+                                <div class="action"><a href="#">View on Github</a></div>
+                            </div><!--//content-->    
+                            <a class="link-mask" href="#"></a>              
+                        </div><!--//item-inner-->
+                    </div><!--//item-->
+                    <div class="item backend frontend col-md-3 col-xs-6 ">
+                        <div class="item-inner">
+                            <figure class="figure">
+                                <img class="img-responsive" src="assets/images/portfolio/portfolio-3.jpg" alt="" />
+                            </figure>
+                            <div class="content text-left">
+                                <h3 class="sub-title"><a href="#">Project Lorem Ipsum</a></h3>
+                                <div class="meta">Django/JavaScript</div>
+                                <div class="action"><a href="#">View on Github</a></div>
+                            </div><!--//content-->    
+                            <a class="link-mask" href="#"></a>              
+                        </div><!--//item-inner-->
+                    </div><!--//item-->
+                    <div class="item frontend col-md-3 col-xs-6 ">
+                        <div class="item-inner">
+                            <figure class="figure">
+                                <img class="img-responsive" src="assets/images/portfolio/portfolio-4.jpg" alt="" />
+                            </figure>
+                            <div class="content text-left">
+                                <h3 class="sub-title"><a href="#">Project Lorem Ipsum</a></h3>
+                                <div class="meta">ReactJS</div>
+                                <div class="action"><a href="#">View on Github</a></div>
+                            </div><!--//content-->    
+                            <a class="link-mask" href="#"></a>              
+                        </div><!--//item-inner-->
+                    </div><!--//item-->
+                    <div class="item backend col-md-3 col-xs-6 ">
+                        <div class="item-inner">
+                            <figure class="figure">
+                                <img class="img-responsive" src="assets/images/portfolio/portfolio-5.jpg" alt="" />
+                            </figure>
+                            <div class="content text-left">
+                                <h3 class="sub-title"><a href="#">Project Lorem Ipsum</a></h3>
+                                <div class="meta">Python</div>
+                                <div class="action"><a href="#">View on Github</a></div>
+                            </div><!--//content-->    
+                            <a class="link-mask" href="#"></a>              
+                        </div><!--//item-inner-->
+                    </div><!--//item-->
+                    <div class="item backend col-md-3 col-xs-6 ">
+                        <div class="item-inner">
+                            <figure class="figure">
+                                <img class="img-responsive" src="assets/images/portfolio/portfolio-6.jpg" alt="" />
+                            </figure>
+                            <div class="content text-left">
+                                <h3 class="sub-title"><a href="#">Project Lorem Ipsum</a></h3>
+                                <div class="meta">JavaScript</div>
+                                <div class="action"><a href="#">View on Github</a></div>
+                            </div><!--//content-->    
+                            <a class="link-mask" href="#"></a>              
+                        </div><!--//item-inner-->
                     </div><!--//item-->
                     
-                    <div class="item">
-                        <div class="work-place">
-                            <h3 class="place">石狮快件中心检验检疫监测系统</h3>
-                            <!-- <div class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>London</div> -->
-                        </div>
-                        <div class="job-meta">
-                            <div class="title"></div>
-                            <div class="time"></div>
-                        </div><!--//job-meta-->
-                        <div class="job-desc">
-                            <p></p> 
-                        </div><!--//job-desc-->
+                    <div class="item frontend col-md-3 col-xs-6 ">
+                        <div class="item-inner">
+                            <figure class="figure">
+                                <img class="img-responsive" src="assets/images/portfolio/portfolio-7.jpg" alt="" />
+                            </figure>
+                            <div class="content text-left">
+                                <h3 class="sub-title"><a href="#">Project Lorem Ipsum</a></h3>
+                                <div class="meta">HTML/AngularJS</div>
+                                <div class="action"><a href="#">View on Github</a></div>
+                            </div><!--//content-->    
+                            <a class="link-mask" href="#"></a>              
+                        </div><!--//item-inner-->
                     </div><!--//item-->
-
-                    <div class="item">
-                        <div class="work-place">
-                            <h3 class="place">山东淄博周村档案管理系统</h3>
-                            <!-- <div class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>London</div> -->
-                        </div>
-                        <div class="job-meta">
-                            <div class="title"></div>
-                            <div class="time"></div>
-                        </div><!--//job-meta-->
-                        <div class="job-desc">
-                            <p></p> 
-                        </div><!--//job-desc-->
+                    
+                    <div class="item frontend backend col-md-3 col-xs-6 ">
+                        <div class="item-inner">
+                            <figure class="figure">
+                                <img class="img-responsive" src="assets/images/portfolio/portfolio-8.jpg" alt="" />
+                            </figure>
+                            <div class="content text-left">
+                                <h3 class="sub-title"><a href="#">Project Lorem Ipsum</a></h3>
+                                <div class="meta">Python/AngularJS</div>
+                                <div class="action"><a href="#">View on Github</a></div>
+                            </div><!--//content-->    
+                            <a class="link-mask" href="#"></a>              
+                        </div><!--//item-inner-->
                     </div><!--//item-->
-
-                    <div class="item">
-                        <div class="work-place">
-                            <h3 class="place">FSA步态分析仪</h3>
-                            <!-- <div class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>London</div> -->
-                        </div>
-                        <div class="job-meta">
-                            <div class="title"></div>
-                            <div class="time"></div>
-                        </div><!--//job-meta-->
-                        <div class="job-desc">
-                            <p></p> 
-                        </div><!--//job-desc-->
-                    </div><!--//item-->
-
-                </div><!--//timeline--> 
-            </section><!--//section-->
-
-            <section id="eudcation-section" class="education-section section">
-            <h2 class="section-title">教育经历</h2>
-            <div class="row">
-                <div class="item col-xs-12 col-sm-4">
-                    <div class="item-inner">
-                        <h3 class="degree">山东大学</h3>
-                        <div class="education-body">
-                            控制科学与工程学院
-                        </div><!--//education-body-->
-                        <div class="time">2012.09 - 2016.06</div>
-                        <div class="desc">
-                            测控技术与仪器 本科
-                        </div>
-                    </div><!--//item-inner-->
-                </div><!--//item-->
+                    
+                </div><!--//item-wrapper-->
                 
-            </div><!--//row-->
-        </section><!--//section-->
-        
+            </section><!--//section-->
+            
         </div>
         <div class="footer">
             
