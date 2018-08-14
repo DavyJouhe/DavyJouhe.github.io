@@ -1,7 +1,7 @@
 /* 
 * @Author: Jouhe
 * @Date:   2018-08-09 09:55:56
-* @Last Modified time: 2018-08-13 16:43:39
+* @Last Modified time: 2018-08-14 16:38:56
 */
  html,body{
     margin:0;
@@ -33,9 +33,10 @@
     width:160px;
     border: 10px solid #ffffff;
     border-radius:50%;
-    background-image:url("../img/profile-photo.jpg"); 
+    background-image:url("../img/photo.jpg"); 
     background-repeat: no-repeat;
-    background-position:-32px -8px;
+    /*background-position:-32px -8px;*/
+    background-position:-20px 0px;
     margin-top: 10px;
 }
 .header-ft{
