@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>音乐第2期</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+body{
+    margin: 0 auto;
+    font-family: "Microsoft YaHei", arial,sans-serif;
+    color: #444444;
+    line-height: 1;
+    padding: 30px;
+}
+@media screen and (min-width: 768px) {
+    body {
+        width: 748px;
+        margin: 10px auto;
+    }
+}
+h1, h2, h3, h4 {
+    color: #111111;
+    font-weight: 400;
+    margin-top: 1em;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Georgia, Palatino, serif;
+}
+h1, h2, h3, h4, h5, p , dl{
+    margin-bottom: 16px;
+    padding: 0;
+}
+h1 {
+    font-size: 48px;
+    line-height: 54px;
+}
+h2 {
+    font-size: 36px;
+    line-height: 42px;
+}
+h1, h2 {
+    border-bottom: 1px solid #EFEAEA;
+    padding-bottom: 10px;
+}
+h3 {
+    font-size: 24px;
+    line-height: 30px;
+}
+h4 {
+    font-size: 21px;
+    line-height: 26px;
+}
+h5 {
+    font-size: 18px;
+    list-style: 23px;
+}
+a {
+    color: #0099ff;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+a:hover {
+    text-decoration: none;
+    color: #ff6600;
+}
+a:visited {
+    /*color: purple;*/
+}
+ul, ol {
+    padding: 0;
+    padding-left: 24px;
+    margin: 0;
+}
+li {
+    line-height: 24px;
+}
+p, ul, ol {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+ol ol, ul ol {
+    list-style-type: lower-roman;
+}
+
+/*pre {
+    padding: 0px 24px;
+    max-width: 800px;
+    white-space: pre-wrap;
+}
+code {
+    font-family: Consolas, Monaco, Andale Mono, monospace;
+    line-height: 1.5;
+    font-size: 13px;
+}*/
+
+code, pre {
+    border-radius: 3px;
+    background-color:#f7f7f7;
+    color: inherit;
+}
+
+code {
+    font-family: Consolas, Monaco, Andale Mono, monospace;
+    margin: 0 2px;
+}
+
+pre {
+    line-height: 1.7em;
+    overflow: auto;
+    padding: 6px 10px;
+    border-left: 5px solid #6CE26C;
+}
+
+pre > code {
+    border: 0;
+    display: inline;
+    max-width: initial;
+    padding: 0;
+    margin: 0;
+    overflow: initial;
+    line-height: inherit;
+    font-size: .85em;
+    white-space: pre;
+    background: 0 0;
+
+}
+
+code {
+    color: #666555;
+}
+
+
+/** markdown preview plus 对于代码块的处理有些问题, 所以使用统一的颜色 */
+/*code .keyword {
+  color: #8959a8;
+}
+
+code .number {
+  color: #f5871f;
+}
+
+code .comment {
+  color: #998
+}*/
+
+aside {
+    display: block;
+    float: right;
+    width: 390px;
+}
+blockquote {
+    border-left:.5em solid #eee;
+    padding: 0 0 0 2em;
+    margin-left:0;
+}
+blockquote  cite {
+    font-size:14px;
+    line-height:20px;
+    color:#bfbfbf;
+}
+blockquote cite:before {
+    content: '\2014 \00A0';
+}
+
+blockquote p {
+    color: #666;
+}
+hr {
+    text-align: left;
+    color: #999;
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+}
+
+dl {
+    padding: 0;
+}
+
+dl dt {
+    padding: 10px 0;
+    margin-top: 16px;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: bold;
+}
+
+dl dd {
+    padding: 0 16px;
+    margin-bottom: 16px;
+}
+
+dd {
+    margin-left: 0;
+}
+
+/* Code below this line is copyright Twitter Inc. */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+button, input {
+    line-height: normal;
+    *overflow: visible;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+input[type=checkbox], input[type=radio] {
+    cursor: pointer;
+}
+/* override default chrome & firefox settings */
+input:not([type="image"]), textarea {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+label,
+input,
+select,
+textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: normal;
+    margin-bottom: 18px;
+}
+input[type=checkbox], input[type=radio] {
+    cursor: pointer;
+    margin-bottom: 0;
+}
+input[type=text],
+input[type=password],
+textarea,
+select {
+    display: inline-block;
+    width: 210px;
+    padding: 4px;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+    height: 18px;
+    color: #808080;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+select, input[type=file] {
+    height: 27px;
+    line-height: 27px;
+}
+textarea {
+    height: auto;
+}
+/* grey out placeholders */
+:-moz-placeholder {
+    color: #bfbfbf;
+}
+::-webkit-input-placeholder {
+    color: #bfbfbf;
+}
+input[type=text],
+input[type=password],
+select,
+textarea {
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+    outline: none;
+    border-color: rgba(82, 168, 236, 0.8);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+/* buttons */
+button {
+    display: inline-block;
+    padding: 4px 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    background-color: #0064cd;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
+    background-image: -moz-linear-gradient(top, #049cdb, #0064cd);
+    background-image: -ms-linear-gradient(top, #049cdb, #0064cd);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd));
+    background-image: -webkit-linear-gradient(top, #049cdb, #0064cd);
+    background-image: -o-linear-gradient(top, #049cdb, #0064cd);
+    background-image: linear-gradient(top, #049cdb, #0064cd);
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border: 1px solid #004b9a;
+    border-bottom-color: #003f81;
+    -webkit-transition: 0.1s linear all;
+    -moz-transition: 0.1s linear all;
+    transition: 0.1s linear all;
+    border-color: #0064cd #0064cd #003f81;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+button:hover {
+    color: #fff;
+    background-position: 0 -15px;
+    text-decoration: none;
+}
+button:active {
+    -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+table {
+    *border-collapse: collapse; /* IE7 and lower */
+    border-spacing: 0;
+    width: 100%;
+}
+table {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    /*-webkit-box-shadow: 0 1px 1px #ccc;
+    -moz-box-shadow: 0 1px 1px #ccc;
+    box-shadow: 0 1px 1px #ccc;   */
+}
+table tr:hover {
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+table td, .table th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    /*-webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;*/
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    padding: 5px;
+}
+
+table td:first-child, table th:first-child {
+    border-left: none;
+}
+
+table th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+table th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+table th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+table tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+table tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+</style>
+<style type="text/css">
+.highlight  { background: #ffffff; }
+.highlight .c { color: #999988; font-style: italic } /* Comment */
+.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .k { font-weight: bold } /* Keyword */
+.highlight .o { font-weight: bold } /* Operator */
+.highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+.highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #999999 } /* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { font-weight: bold } /* Keyword.Constant */
+.highlight .kd { font-weight: bold } /* Keyword.Declaration */
+.highlight .kp { font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #009999 } /* Literal.Number */
+.highlight .s { color: #d14 } /* Literal.String */
+.highlight .na { color: #008080 } /* Name.Attribute */
+.highlight .nb { color: #0086B3 } /* Name.Builtin */
+.highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+.highlight .no { color: #008080 } /* Name.Constant */
+.highlight .ni { color: #800080 } /* Name.Entity */
+.highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
+.highlight .nn { color: #555555 } /* Name.Namespace */
+.highlight .nt { color: #000080 } /* Name.Tag */
+.highlight .nv { color: #008080 } /* Name.Variable */
+.highlight .ow { font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #009999 } /* Literal.Number.Float */
+.highlight .mh { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb { color: #d14 } /* Literal.String.Backtick */
+.highlight .sc { color: #d14 } /* Literal.String.Char */
+.highlight .sd { color: #d14 } /* Literal.String.Doc */
+.highlight .s2 { color: #d14 } /* Literal.String.Double */
+.highlight .se { color: #d14 } /* Literal.String.Escape */
+.highlight .sh { color: #d14 } /* Literal.String.Heredoc */
+.highlight .si { color: #d14 } /* Literal.String.Interpol */
+.highlight .sx { color: #d14 } /* Literal.String.Other */
+.highlight .sr { color: #009926 } /* Literal.String.Regex */
+.highlight .s1 { color: #d14 } /* Literal.String.Single */
+.highlight .ss { color: #990073 } /* Literal.String.Symbol */
+.highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #008080 } /* Name.Variable.Class */
+.highlight .vg { color: #008080 } /* Name.Variable.Global */
+.highlight .vi { color: #008080 } /* Name.Variable.Instance */
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+.pl-c {
+    color: #969896;
+}
+
+.pl-c1,.pl-mdh,.pl-mm,.pl-mp,.pl-mr,.pl-s1 .pl-v,.pl-s3,.pl-sc,.pl-sv {
+    color: #0086b3;
+}
+
+.pl-e,.pl-en {
+    color: #795da3;
+}
+
+.pl-s1 .pl-s2,.pl-smi,.pl-smp,.pl-stj,.pl-vo,.pl-vpf {
+    color: #333;
+}
+
+.pl-ent {
+    color: #63a35c;
+}
+
+.pl-k,.pl-s,.pl-st {
+    color: #a71d5d;
+}
+
+.pl-pds,.pl-s1,.pl-s1 .pl-pse .pl-s2,.pl-sr,.pl-sr .pl-cce,.pl-sr .pl-sra,.pl-sr .pl-sre,.pl-src,.pl-v {
+    color: #df5000;
+}
+
+.pl-id {
+    color: #b52a1d;
+}
+
+.pl-ii {
+    background-color: #b52a1d;
+    color: #f8f8f8;
+}
+
+.pl-sr .pl-cce {
+    color: #63a35c;
+    font-weight: bold;
+}
+
+.pl-ml {
+    color: #693a17;
+}
+
+.pl-mh,.pl-mh .pl-en,.pl-ms {
+    color: #1d3e81;
+    font-weight: bold;
+}
+
+.pl-mq {
+    color: #008080;
+}
+
+.pl-mi {
+    color: #333;
+    font-style: italic;
+}
+
+.pl-mb {
+    color: #333;
+    font-weight: bold;
+}
+
+.pl-md,.pl-mdhf {
+    background-color: #ffecec;
+    color: #bd2c00;
+}
+
+.pl-mdht,.pl-mi1 {
+    background-color: #eaffea;
+    color: #55a532;
+}
+
+.pl-mdr {
+    color: #795da3;
+    font-weight: bold;
+}
+
+.pl-mo {
+    color: #1d3e81;
+}
+.task-list {
+padding-left:10px;
+margin-bottom:0;
+}
+
+.task-list li {
+    margin-left: 20px;
+}
+
+.task-list-item {
+list-style-type:none;
+padding-left:10px;
+}
+
+.task-list-item label {
+font-weight:400;
+}
+
+.task-list-item.enabled label {
+cursor:pointer;
+}
+
+.task-list-item+.task-list-item {
+margin-top:3px;
+}
+
+.task-list-item-checkbox {
+display:inline-block;
+margin-left:-20px;
+margin-right:3px;
+vertical-align:1px;
+}
+</style>
+</head>
+<body>
+<h1 id="-"><strong>欧美音乐第十一至二十期</strong></h1>
+<p>第十一期：特别奉献：这期送给我的舍友谷长君，我想尽脑汁看能找到几首你没有的：（估计我有的你都有了，你听的英文歌太多了。）</p>
+<pre><code>1.S Club 7——Bring it all back
+2.Amy Diamond——Heartbeats（很不错哦）
+3.Wiz khalifa——Black in yellow（在足球MV找到的）
+4.The All American Rejects——Gives you hell
+5.Spice Girls——Wannabe（辣妹组合）
+6.Roxy——How do you do（一个广告的曲子）
+7.The ting tings——That&#39;s not my name（还是一个广告的曲子，很好听）
+8.Lift it high（曼联曾经的队歌，不知道是不是）
+9.Simple Plan——Welcome to my life
+10.Hilary Duff——Why not（一直找不到另一首，不过这首很不错）
+</code></pre><p>想找到你没有的歌真不容易，而且这十首不知道你有几首了。。献给我那富帅男神版的舍友——谷长君。</p>
+<p>第十二期：大家好，我是主播和。昨天同学聚会所以没有更新。今天是6.8.我的两个弟妹毕业了，哈哈。。。祝他们毕业快乐吧。。。<br>今天给大家推荐的是西城男孩的。是的，推荐了这么多怎么可以没我大西城。。我最早开始听英文歌就是从西城男孩开始的。所以对他们情有独钟。。。废话不多说，上歌（西城可能会推荐两到三期吧。博主以后更新会比较慢，因为要期末考，忙着复习····）</p>
+<pre><code>1.Westlife——My Love(西城男孩成名曲)
+2.Westlife——All out of love
+3.Westlife——I need you
+4.Westlife——Open your heart（宝贝，敞开你的心扉）
+5.Westlife——Change the word
+6.Westlife——If I let you go
+7.Westlife——More than words（节奏感真赞）
+8.Westlife——Swear it again（很好听）
+9.Westlife——You rise me up（世界杯主题曲）
+10.Westlife——I lay my love on you（最爱之一）
+</code></pre><p>第十三期：依旧我大西城。。。</p>
+<pre><code>1.Westlife——Miss you（不错）
+2.Westlife——You make me feel(那时候很喜欢，现在没那么有感觉了，不过还是推荐)
+3.Westlife——What about now（推荐）
+4.Westlife——Seasons in the sun（耳熟能详）
+5.Westlife——Home
+6.Westlife——Amazing
+7.Westlife——Soledad（推荐）
+8.Westlife——The rose(西城版的ROSE，还有另一个版本的，这首歌真让人想哭)
+9.Westlife——Angel(西城版的，电影原声是来之尼古拉斯凯奇的电影天使之城。这首歌我也非常喜欢)
+10.Westlife——Unbreakable
+</code></pre><p>就是这么喜欢西城</p>
+<p>第十四期：大家好，好男人就是我，我就是主播和。。。欢迎来到第十四期。。。近期大家是不是也在看世界杯呢。。。好激动有木有，博主支持湖人队,因为我喜欢李娜,她跨栏那么厉害,基本不用抢七就能一杆清台的,她提拉弧旋球也很强,过弯很流畅,入水都没有水花的。最帅 的是打小鸟球不用背越式,直接跳发,托马斯全旋接一个全垒打,对方的四分卫就算是黑带,也经常来不及使出盛装舞步就直接被将死。哈哈，开个玩笑。。。这期给大家带来的是足球音乐。。。欢迎收听哦~~~（其实就是一些气氛活跃的歌）</p>
+<pre><code>1.K Naan——Wavin&#39;Flag（来自南非世界杯）
+2.Ricky Martin——The cup of life（敢说你没听过吗！！！）
+3.Coldplay——Viva la vida（这首一定不用我说）
+4.Enrique Iglesias——Hero（天下足球里的音乐）
+5.Kevin Rudolf——I made it（在一个C罗的MV看到的）
+6.Ke$ha——Die Young（绝对推荐）
+7.Michel telo——Ai se eu te pego（实况13，不知道哪个版本的。博主玩了太多版本的····）
+8.Michelle Branch——The game of love（不错）
+9. Pitbull——Ech pa&#39;lla
+10. Pitbull——timber(欢快两连弹)
+</code></pre><p>第十五期：   Hi,大家好，我是你们的主播和。这么就没更新没把我忘了吧？最近博主在忙于各种期末考。两周的时间仿佛回到了高三。。。这两周经历了很多事，明白了很多事。甚至，博主还和我们曾经的509的舍友说分离了（再也没有一听就能猜到我歌的谷长君和吐槽大神金爷了）。。。 伤心的事就不提了。。。博主答应一位老同学，这期推荐极品音乐。好听到爆，不好听你打我！像这种极品音乐我会比会比较晚推荐，太早推荐就没意思了。这期是特例如果这十首都不符合你的菜，我只能说：你耳朵绝对有问题~~~啦啦啦。。。废话不多说。上歌。。。(顺便预告下一期：水果姐！！！)</p>
+<pre><code>1.Serebro——Mi Mi Mi(盛夏已到，男生们要“清凉一下吗&quot;（你懂的）这首歌一开头就吸引了我。男生可别错过MV哦（美女福利）~~~)
+2.Elin Lanto——I can do it(第一次听这个瑞典女孩唱就被迷住了，简直不能再偷偷滴藏着了)
+3.DJ antonie——Welcome to st.tropez(耐心听，这是一首非常好的极品音乐)
+4.Augustana——Boston（每次到高潮都感觉好悲伤要哭，虽然根本没听懂，因为我还没去看歌词）
+5.Coldplay——Magic（酷玩乐队岂有不推荐的理由。这首MV也不错）
+6.Demi Lovato——Give your heart a break（同学手机搜刮过来的，绝对赞）
+7.Holly Henry——The scientist（听开头就爱上的那种，值得你听）
+8.Sibel——Sorry（非常好听，力荐）
+9.Maroon 5——Move like Jagger（舞动你的双耳哦~）
+10.Marina and Diamonds——Primadonna（吐血推荐，不好听你打我~）
+</code></pre><p>楼主这期送的歌怎么样啊。。。敢说不好你们就死定了·····虽然可能会有几首是以我品位来的。不过这期绝对是极品。期待下期极品吧。</p>
+<p>第十六期：Hello，大家好，我是周杰伦<del>~咳咳</del>~的歌迷。。。听说周杰伦要结婚了，博主瞬间感到时光飞逝啊。想当年是听着周杰伦的歌长大的，那时候做什么事都放着周杰伦的歌。咳咳，额，好像有点跑题了。这期给大家带来的是水果姐。你没听错。水果姐Katy Perry。为什么叫水果姐呢。原因是她刚开始几乎每个单封上都有水果，表演的时候布景也有水果，也喜欢把自己打扮成水果。博主可以在这里偷偷告诉你们一个小秘密。我现在最喜欢的两个欧美女歌手：一个是泰勒，另一个就是我们的水果姐了。 （想想还有点小激动呢。。。）顺便说一句，好听的话可以去看看MV，几个很不错。她的歌很有节奏感，很有活力。</p>
+<pre><code>1.Kary Perry——Hot N Cold(第一次听是在一部喜剧电影《艾尔文与花栗鼠2》听到的，然后有次看了这首歌的MV才找到的。循环了1天)
+2.Kary Perry——Part of Me(她的歌都很有活力，这是喜欢的理由)
+3.Kary Perry——Teenage Dream(很不错)
+4.Kary Perry——Last Friday Night(节奏感很好)
+5.Kary Perry——Wide Awake(听一遍也是爱上了)
+6.Kary Perry——The one that got away(要的就是节奏感)
+7.Kary Perry——Dark house(刚开始感觉好像非主流)
+8.Kary Perry——I kissed a girl(推荐)
+9.Kary Perry——Roar(好听)
+10.Kary Perry——E.T(不错)
+`
+</code></pre><p>第十七期：无差别推荐，发现放假后博主页不是很闲啊~发现好多事要做。而且我主播也开始担心自己的未来。每天至少都得学点什么，不然感觉人生会荒废的。这期给大家带来无差别推荐。表达一下最近的各种心情。</p>
+<pre><code>1.暮光之城——Full moon(一首很神奇的歌，你听听就知道了)
+2.Marc terenzi——Love to be loved by you(学校广播放的，很不错的一首)
+3.Shakira——Underneath your clothes(拉丁天后的一首抒情小曲)
+4.Justin Bieber——Mistletoe(以前很喜欢B宝，现在因为他的人品不喜欢了。不过歌唱得还是不错的。)
+5.P-ride——So wie ich(这首歌我歌词是不是英文我几乎没听懂，感觉半是半不是。不过用了卡农的基调加上说唱，总之还不错)
+6.Sweetbox——Don&#39;t push me(每次听糖果盒子的歌，总是忍不住跟着哼。太有节奏了。这首用了贝多芬月光曲的前奏。算是DJ舞曲吧)
+7.Tiggy——Ring a ling(中文歌你们肯定听过)
+8.Bule——One love(老歌就不多说了)
+9.Onerepublic——Secrets（那什么来表达我对这首歌的喜爱）
+10.Jennifer paiga——Crush(It&#39;s just a little crush。歌曲朗朗上口。值得一听)
+</code></pre><p>第十八期：欢迎继续收听你的月亮我的音悦台。今天给大家推荐的人是大家最熟悉的Lady GaGa。记得09年刚进高中的时候，那时候年段里突然流行一首很奇怪的歌。没错，就是Pocker face。这首歌的MV我看了好几遍。那时候觉得好雷人啊····我听GAGA的歌不多。所以这里就推荐几首。其他的我补充一些之前没写过的或是一些新的。(Oh~,My Lady Ga Ga)</p>
+<pre><code>1.Lady GaGa——Pocker face
+2.Lady GaGa——Eh Eh
+3.Lady GaGa——Paparazzi
+4.Lady GaGa——Just dance
+5.Lady GaGa——Bad romance
+6.Katy Perry——Firework
+7.Foster the people——Pumped up kicks(我喜欢那段吹口哨)
+8.Gwen stefani——Hollaback girl（推荐一下，不过满口的Shit）
+9.Natasha thomas——Skin deep
+10.Various artists——I will survive
+</code></pre><p>第十九期：“你是我的小苹果”<br>“讨厌啦”<br>“不，我是说我他喵的真想削你”<br>Hi,大家好，我是你们的DJ主播和。又到了分享音乐的时间了。最近一直没更新。因为博主很忙。没错，忙着玩游戏（这种事情就不要揭穿了好吗。）令博主感动的是，居然会有网友来催更新。博主感动得流出了鼻血。。。看来还是有点粉丝的。。。这期给大家带来的是广告的背景音乐。很多人听到一些好的广告音乐却不知道歌名，这里给大家推荐十首。。。</p>
+<pre><code>1.The cascades——rhythm of the rain(绿箭口香糖广告歌)
+2.Liz phair——why can&#39;t i(nba广告歌)
+3.朴慧京——yesterday(LG闪耀手机广告歌)
+4.Feist——One Two Three Four(ipod广告歌)
+5.The asteroids galaxy——The golden age(喜力啤酒广告)
+6.Daniel powter——Free Loop(福特汽车广告歌)
+7.O-Zone——dragostea din tei(电影“四眼天鸡”广告曲)
+8.Natasha Thomas——Save Your Kisses For Me (Lacoste Pink香水广告歌)
+9.The archires——Sugar Sugar(Sugar糖果广告曲)
+10.James blunt——You&#39;re Beautiful(大众汽车广告曲)
+</code></pre><p>第20期：如果有一天，你遇到了一个很好的人，一定要好好珍惜。<br>这么有哲理的话，肯定是主播和说的。怎么可能是黑状呢。不小心黑了我的同学。希望他没看到。。。<br>今天给大家带来的是无差别推荐。。。因为分类好累啊，博主是个懒虫。。。(最近听到一首歌很不错，就是一直找不到歌名 )</p>
+<pre><code>1.Nelly futado——Big hoops(我的手机不好还是音质出问题了，感觉女主唱得好小声，不过歌还可以)
+2.Demi lovato——Heart attack（不错不错，偶很喜欢）
+3.The wanted——Glad you came（好听）
+4.Christina aguilera——Your body（All I wanna do is love your body 赤果果的表白吗=。=？）
+5.Elie——Lights
+6.Fun——Some nights
+7.Jessie j——Domino（总觉得在哪里听过。就是想不起来）
+8.Pink——Blow me（这么有节奏的歌不推荐给你们不好意思）
+9.Ne yo——Let me love you（让我爱你吧，亲！）
+10.Justin bieber——As long as you love me(本期重点推荐，B宝的一首歌。虽然我不是很喜欢他)
+</code></pre>
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
